@@ -1,0 +1,31 @@
+{
+  "name": "cemento",
+  "version": "0.0.0",
+  "description": "Harden properties of entity.",
+  "main": "cemento.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/cemento.git"
+  },
+  "keywords": [
+    "property",
+    "constant",
+    "non-enumerable",
+    "non-configurable",
+    "non-writable",
+    "harden",
+    "cemento"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/cemento/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/cemento#readme",
+  "dependencies": {
+    "harden": "^0.5.0"
+  }
+}

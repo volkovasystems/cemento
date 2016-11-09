@@ -1,0 +1,30 @@
+{
+  "name": "cemento",
+  "version": "0.0.0",
+  "description": "Harden properties of entity.",
+  "main": "cemento.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "property",
+    "constant",
+    "non-enumerable",
+    "non-configurable",
+    "non-writable",
+    "harden",
+    "cemento"
+  ],
+  "homepage": "https://github.com/volkovasystems/cemento",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "harden": "^0.5.0"
+  }
+}
