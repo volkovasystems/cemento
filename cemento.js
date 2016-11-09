@@ -64,7 +64,7 @@ if( typeof window != "undefined" && !( "harden" in window ) ){
 	throw new Error( "harden is not defined" );
 }
 
-this.cemento = function cemento( entity ){
+var cemento = function cemento( entity ){
 	/*;
 		@meta-configuration:
 			{
@@ -88,5 +88,5 @@ this.cemento = function cemento( entity ){
 };
 
 if( typeof module != "undefined" && typeof module.exports != "undefined" ){
-	module.exports = this.cemento;
+	module.exports = cemento;
 }
