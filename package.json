@@ -1,6 +1,6 @@
 {
   "name": "cemento",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Harden properties of entity.",
   "main": "cemento.js",
   "scripts": {
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/volkovasystems/cemento#readme",
   "dependencies": {
-    "harden": "^0.6.0"
+    "harden": "^0.7.0"
   }
 }

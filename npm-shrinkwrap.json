@@ -1,11 +1,11 @@
 {
   "name": "cemento",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "harden": {
-      "version": "0.6.0",
+      "version": "0.7.0",
       "from": "harden@latest",
-      "resolved": "https://registry.npmjs.org/harden/-/harden-0.6.0.tgz"
+      "resolved": "https://registry.npmjs.org/harden/-/harden-0.7.0.tgz"
     }
   }
 }

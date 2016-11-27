@@ -56,15 +56,9 @@
 	@end-include
 */
 
-if( typeof require == "function" ){
-	var harden = require( "harden" );
-}
+const harden = require( "harden" );
 
-if( typeof window != "undefined" && !( "harden" in window ) ){
-	throw new Error( "harden is not defined" );
-}
-
-var cemento = function cemento( entity ){
+const cemento = function cemento( entity ){
 	/*;
 		@meta-configuration:
 			{
@@ -73,12 +67,19 @@ var cemento = function cemento( entity ){
 		@end-meta-configuration
 	*/
 
+	if( typeof entity == "undefined" ||
+		!entity ||
+		Object.getOwnPropertyNames( entity ).length > 0 )
+	{
+		throw new Error( "invalid entity" );
+	}
+
 	for( let property in entity ){
 		if( entity.hasOwnProperty( property ) ){
 			let value = entity[ property ];
 			delete entity[ property ];
 
-			entity = entity.harden?
+			entity = ( entity.harden && typeof entity.harden == "function" )?
 				entity.harden( property, value ) :
 				harden( property, value, entity );
 		}
@@ -87,6 +88,4 @@ var cemento = function cemento( entity ){
 	return Object.freeze( entity );
 };
 
-if( typeof module != "undefined" && typeof module.exports != "undefined" ){
-	module.exports = cemento;
-}
+module.exports = cemento;
