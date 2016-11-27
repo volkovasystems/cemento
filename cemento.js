@@ -69,7 +69,7 @@ const cemento = function cemento( entity ){
 
 	if( typeof entity == "undefined" ||
 		!entity ||
-		Object.getOwnPropertyNames( entity ).length > 0 )
+		Object.getOwnPropertyNames( entity ).length == 0 )
 	{
 		throw new Error( "invalid entity" );
 	}
@@ -77,7 +77,9 @@ const cemento = function cemento( entity ){
 	for( let property in entity ){
 		if( entity.hasOwnProperty( property ) ){
 			let value = entity[ property ];
-			delete entity[ property ];
+			try{
+				delete entity[ property ];
+			}catch( error ){ }
 
 			entity = ( entity.harden && typeof entity.harden == "function" )?
 				entity.harden( property, value ) :
