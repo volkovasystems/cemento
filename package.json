@@ -1,10 +1,13 @@
 {
   "name": "cemento",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Harden properties of entity.",
   "main": "cemento.js",
+  "support": "cemento.support.js",
+  "deploy": "cemento.deploy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel cemento.js -o cemento.support.js & webpack",
+    "test": "mocha cemento-test.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +23,23 @@
     "cemento"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/cemento/issues"
   },
   "homepage": "https://github.com/volkovasystems/cemento#readme",
   "dependencies": {
-    "harden": "^0.7.0"
+    "babel-runtime": "^6.20.0",
+    "harden": "^0.12.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.16.0",
+    "webpack": "^1.14.0"
   }
 }

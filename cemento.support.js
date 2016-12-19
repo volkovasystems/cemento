@@ -59,38 +59,43 @@
 	@end-include
 */
 
-const harden = require( "harden" );
+var _freeze = require("babel-runtime/core-js/object/freeze");
 
-const cemento = function cemento( entity ){
+var _freeze2 = _interopRequireDefault(_freeze);
+
+var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");
+
+var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var harden = require("harden");
+
+var cemento = function cemento(entity) {
 	/*;
-		@meta-configuration:
-			{
-				"entity:required": "*"
-			}
-		@end-meta-configuration
-	*/
+ 	@meta-configuration:
+ 		{
+ 			"entity:required": "*"
+ 		}
+ 	@end-meta-configuration
+ */
 
-	if( typeof entity == "undefined" ||
-		!entity ||
-		Object.getOwnPropertyNames( entity ).length == 0 )
-	{
-		throw new Error( "invalid entity" );
+	if (typeof entity == "undefined" || !entity || (0, _getOwnPropertyNames2.default)(entity).length == 0) {
+		throw new Error("invalid entity");
 	}
 
-	for( let property in entity ){
-		if( entity.hasOwnProperty( property ) ){
-			let value = entity[ property ];
-			try{
-				delete entity[ property ];
-			}catch( error ){ }
+	for (var property in entity) {
+		if (entity.hasOwnProperty(property)) {
+			var value = entity[property];
+			try {
+				delete entity[property];
+			} catch (error) {}
 
-			entity = ( entity.harden && typeof entity.harden == "function" )?
-				entity.harden( property, value ) :
-				harden( property, value, entity );
+			entity = entity.harden && typeof entity.harden == "function" ? entity.harden(property, value) : harden(property, value, entity);
 		}
 	}
 
-	return Object.freeze( entity );
+	return (0, _freeze2.default)(entity);
 };
 
 module.exports = cemento;
