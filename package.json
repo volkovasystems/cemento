@@ -6,7 +6,7 @@
   "support": "cemento.support.js",
   "deploy": "cemento.deploy.js",
   "scripts": {
-    "build": "babel cemento.js -o cemento.support.js & webpack",
+    "build": "babel cemento.js -o cemento.support.js && webpack",
     "test": "mocha cemento-test.js"
   },
   "repository": {
