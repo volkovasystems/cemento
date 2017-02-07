@@ -2,4 +2,5 @@
 
 const cemento = require( "./cemento.js" );
 
-console.log( cemento( { "STRING": "string" } ) );
+console.log( cemento( { "name": "simple" } ) );
+console.log( cemento( ) );
