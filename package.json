@@ -1,10 +1,11 @@
 {
   "name": "cemento",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Harden properties of entity.",
   "main": "cemento.js",
   "support": "cemento.support.js",
   "deploy": "cemento.deploy.js",
+  "browser": "cemento.deploy.js",
   "scripts": {
     "build": "babel cemento.js -o cemento.support.js && webpack",
     "test": "mocha cemento-test.js"
@@ -41,6 +42,6 @@
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
     "source-map-loader": "^0.1.6",
-    "webpack": "^1.14.0"
+    "webpack": "^2.2.1"
   }
 }
