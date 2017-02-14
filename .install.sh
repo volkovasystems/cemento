@@ -12,4 +12,5 @@ webpack \
 --dev && \
 bower install \
 harden \
---save
+--save \
+--force-latest

@@ -1,6 +1,6 @@
 {
   "name": "cemento",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Harden properties of entity.",
   "main": "cemento.deploy.js",
   "support": "cemento.support.js",
@@ -27,6 +27,6 @@
     "tests"
   ],
   "dependencies": {
-    "harden": "^0.15.0"
+    "harden": "^0.16.0"
   }
 }
