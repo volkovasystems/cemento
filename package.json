@@ -1,13 +1,13 @@
 {
   "name": "cemento",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Harden properties of entity.",
   "main": "cemento.js",
   "support": "cemento.support.js",
   "deploy": "cemento.deploy.js",
   "browser": "cemento.deploy.js",
   "scripts": {
-    "build": "babel cemento.js -o cemento.support.js && webpack",
+    "build": "babel cemento.js -o cemento.support.js && webpack --progress",
     "test": "mocha cemento-test.js"
   },
   "repository": {
@@ -34,12 +34,12 @@
   "homepage": "https://github.com/volkovasystems/cemento#readme",
   "dependencies": {
     "babel-runtime": "^6.22.0",
-    "harden": "^0.14.0"
+    "harden": "^0.15.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.22.2",
-    "babel-core": "^6.22.1",
-    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.22.0",
     "source-map-loader": "^0.1.6",
     "webpack": "^2.2.1"
