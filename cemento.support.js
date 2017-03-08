@@ -54,41 +54,48 @@
               
               	@include:
               		{
-              			"harden": "harden"
+              			"harden": "harden",
+              			"kount": "kount",
               		}
               	@end-include
-              */var _freeze = require("babel-runtime/core-js/object/freeze");var _freeze2 = _interopRequireDefault(_freeze);var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */var _freeze = require("babel-runtime/core-js/object/freeze");var _freeze2 = _interopRequireDefault(_freeze);var _keys = require("babel-runtime/core-js/object/keys");var _keys2 = _interopRequireDefault(_keys);var _typeof2 = require("babel-runtime/helpers/typeof");var _typeof3 = _interopRequireDefault(_typeof2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var harden = require("harden");
+var kount = require("kount");
 
-var cemento = function cemento(entity) {
+var cemento = function cemento(entity, context) {
 	/*;
-                                        	@meta-configuration:
-                                        		{
-                                        			"entity:required": "*"
-                                        		}
-                                        	@end-meta-configuration
-                                        */
+                                                 	@meta-configuration:
+                                                 		{
+                                                 			"entity:required": "object",
+                                                 			"context": "object"
+                                                 		}
+                                                 	@end-meta-configuration
+                                                 */
 
-	if (typeof entity == "undefined" || !entity ||
-	(0, _getOwnPropertyNames2.default)(entity).length == 0)
-	{
+	if ((typeof entity === "undefined" ? "undefined" : (0, _typeof3.default)(entity)) != "object" || !entity || kount(entity) == 0) {
 		throw new Error("invalid entity");
 	}
 
-	for (var property in entity) {
-		if (entity.hasOwnProperty(property)) {
-			var value = entity[property];
+	var data = entity;
+	context = context || entity;
 
-			try {delete entity[property];} catch (error) {}
+	entity = harden.bind(context);
 
-			entity = entity.harden && typeof entity.harden == "function" ?
-			entity.harden(property, value) :
-			harden(property, value, entity);
-		}
+	(0, _keys2.default)(data).forEach(function (property) {
+		var value = data[property];
+
+		try {delete data[property];} catch (error) {}
+
+		entity(property, value);
+	});
+
+	try {
+		return (0, _freeze2.default)(context);
+
+	} catch (error) {
+		throw new Error("cannot freeze context, " + error.stack);
 	}
-
-	return (0, _freeze2.default)(entity);
 };
 
 module.exports = cemento;

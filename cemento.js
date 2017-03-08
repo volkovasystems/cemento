@@ -54,41 +54,48 @@
 
 	@include:
 		{
-			"harden": "harden"
+			"harden": "harden",
+			"kount": "kount",
 		}
 	@end-include
 */
 
 const harden = require( "harden" );
+const kount = require( "kount" );
 
-const cemento = function cemento( entity ){
+const cemento = function cemento( entity, context ){
 	/*;
 		@meta-configuration:
 			{
-				"entity:required": "*"
+				"entity:required": "object",
+				"context": "object"
 			}
 		@end-meta-configuration
 	*/
 
-	if( typeof entity == "undefined" || !entity ||
-		Object.getOwnPropertyNames( entity ).length == 0 )
-	{
+	if( typeof entity != "object" || !entity || kount( entity ) == 0 ){
 		throw new Error( "invalid entity" );
 	}
 
-	for( let property in entity ){
-		if( entity.hasOwnProperty( property ) ){
-			let value = entity[ property ];
+	let data = entity;
+	context = context || entity;
 
-			try{ delete entity[ property ]; }catch( error ){ }
+	entity = harden.bind( context );
 
-			entity = ( entity.harden && typeof entity.harden == "function" )?
-				entity.harden( property, value ) :
-				harden( property, value, entity );
-		}
+	Object.keys( data ).forEach( ( property ) => {
+		let value = data[ property ];
+
+		try{ delete data[ property ]; }catch( error ){ }
+
+		entity( property, value );
+	} );
+
+	try{
+		return Object.freeze( context );
+
+	}catch( error ){
+		throw new Error( `cannot freeze context, ${ error.stack }` );
 	}
-
-	return Object.freeze( entity );
 };
 
 module.exports = cemento;
