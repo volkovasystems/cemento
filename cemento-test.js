@@ -1,6 +1,12 @@
-"use strict";
-
+const assert = require( "assert" );
 const cemento = require( "./cemento.js" );
 
-console.log( cemento( { "name": "simple" } ) );
-console.log( require( "util" ).inspect( cemento( { "name": "simple" } ), { "showHidden":true } ) );
+let test = { };
+let entity = cemento( { "name": "simple" }, test );
+let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+assert.equal( entity[ "name" ], "simple", "should have value 'simple'" );
+assert.equal( descriptor[ "writable" ], false, "should be false" );
+assert.equal( descriptor[ "configurable" ], false, "should be false" );
+assert.equal( descriptor[ "enumerable" ], false, "should be false" );
+
+console.log( "ok" );
