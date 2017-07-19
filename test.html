@@ -1,8 +1,36 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./cemento.deploy.js">
-		</script>
+		<title>cemento unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./cemento.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "cemento unit test", function( assert ) {
+
+				let test = { };
+				let entity = cemento( { "name": "simple" }, test );
+				let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+
+				assert.equal( entity[ "name" ], "simple", "should have value 'simple'" );
+
+				assert.equal( descriptor[ "writable" ], false, "should be false" );
+
+				assert.equal( descriptor[ "configurable" ], false, "should be false" );
+
+				assert.equal( descriptor[ "enumerable" ], false, "should be false" );
+
+			} );
+		</script>
+	</body>
 </html>
