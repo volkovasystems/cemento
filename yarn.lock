@@ -2498,9 +2498,9 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-kount@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/kount/-/kount-0.11.0.tgz#99775ed4a1b096e8ef5547f60d63e59f1d3e5b84"
+kount@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/kount/-/kount-0.12.0.tgz#bc68c0c931b171383d846ede48e20c478af6a58d"
   dependencies:
     babel-runtime "^6.23.0"
 
