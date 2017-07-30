@@ -1,0 +1,88 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2017-07-30T11:42:53.044Z",
+    "end": "2017-07-30T11:42:53.050Z",
+    "duration": 6
+  },
+  "tests": [
+    {
+      "title": "should freeze the object",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) should freeze the object",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have a name property with a value of 'simple'",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) should have a name property with a value of 'simple'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should make the object property or descriptor non-writable",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) Object properties or descriptor should make the object property or descriptor non-writable",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should make the object property or descriptor non-configurable",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) Object properties or descriptor should make the object property or descriptor non-configurable",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should make the object property or descriptor non-enumerable",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) Object properties or descriptor should make the object property or descriptor non-enumerable",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should freeze the object",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) should freeze the object",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should have a name property with a value of 'simple'",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) should have a name property with a value of 'simple'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should make the object property or descriptor non-writable",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) Object properties or descriptor should make the object property or descriptor non-writable",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should make the object property or descriptor non-configurable",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) Object properties or descriptor should make the object property or descriptor non-configurable",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should make the object property or descriptor non-enumerable",
+      "fullTitle": "cemento `cemento with entity and context` cemento( { 'name': 'simple' }, { } ) Object properties or descriptor should make the object property or descriptor non-enumerable",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}

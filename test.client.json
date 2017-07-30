@@ -1,0 +1,1 @@
+{"state":{"passed":0,"failed":0,"skipped":0},"start":"2017-07-30T11:43:01.412Z","end":"2017-07-30T11:43:35.016Z","capabilities":{"browserName":"chrome","chromeOptions":{"args":["disable-gpu","headless"]},"proxy":null},"host":"127.0.0.1","port":4444,"baseUrl":"http://localhost","framework":"mocha","mochaOpts":{"timeout":10000,"ui":"bdd"},"suites":[]}
