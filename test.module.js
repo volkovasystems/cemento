@@ -164,8 +164,9 @@ describe( "cemento", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `"cemento( { 'name': 'simple' }"`, ( ) => {
-		it( "should be equal to 'simple'", ( ) => {
+	describe( `"cemento( { 'name': 'simple' }, { } )"`, ( ) => {
+
+		it( "should contain name property with value of 'simple'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
@@ -180,6 +181,23 @@ describe( "cemento", ( ) => {
 			assert.equal( result, "simple" );
 
 		} );
+
+		it( "should freeze the object", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let test = { };
+					let entity = cemento( { "name": "simple" }, test );
+					return Object.isFrozen( entity );
+				}
+
+			).value;
+
+			assert.equal( result, true );
+
+		} );
+
 	} );
 
 
