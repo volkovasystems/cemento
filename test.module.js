@@ -162,30 +162,82 @@ describe( "cemento", ( ) => {
 
 describe( "cemento", ( ) => {
 
-	const testBridge = path.resolve(__dirname, "bridge.html");
-	const bridgeURL = "file://" + testBridge;
-
-	describe( "`cemento with entity and context`", ( ) => {
-
-		describe( "cemento( { 'name': 'simple' }, { } )", ( ) => {
+	describe( `"cemento( { 'name': 'simple' }"`, ( ) => {
+		it( "should be equal to 'simple'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
-					//: @ignore:
 					let test = { };
 					let entity = cemento( { "name": "simple" }, test );
-					//console.log( "Entity JLM", entity );
-					return Object.isFrozen( entity );
-					//: @end-ignore
+					return entity.name;
 				}
 
-			);
+			).value;
 
-			//console.log( "JLM logs", result );
+			assert.equal( result, "simple" );
 
 		} );
+	} );
 
+
+	describe( `"Property descriptor writable"`, ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let test = { };
+					let entity = cemento( { "name": "simple" }, test );
+					let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+					return descriptor.writable;
+				}
+
+			).value;
+
+			assert.equal( result, false );
+
+		} );
+	} );
+
+
+	describe( `"Property descriptor configurable"`, ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let test = { };
+					let entity = cemento( { "name": "simple" }, test );
+					let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+					return descriptor.configurable;
+				}
+
+			).value;
+
+			assert.equal( result, false );
+
+		} );
+	} );
+
+
+	describe( `"Property descriptor enumerable"`, ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let test = { };
+					let entity = cemento( { "name": "simple" }, test );
+					let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+					return descriptor.enumerable;
+				}
+
+			).value;
+
+			assert.equal( result, false );
+
+		} );
 	} );
 
 } );
