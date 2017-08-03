@@ -163,7 +163,7 @@ describe( "cemento", ( ) => {
 describe( "cemento", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
-	
+
 	describe( `"cemento( { 'name': 'simple' }"`, ( ) => {
 		it( "should be equal to 'simple'", ( ) => {
 
@@ -185,7 +185,7 @@ describe( "cemento", ( ) => {
 
 	describe( `"Property descriptor writable"`, ( ) => {
 		it( "should be equal to false", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -196,7 +196,7 @@ describe( "cemento", ( ) => {
 				}
 
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, false );
 
 		} );
@@ -205,7 +205,7 @@ describe( "cemento", ( ) => {
 
 	describe( `"Property descriptor configurable"`, ( ) => {
 		it( "should be equal to false", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -216,7 +216,7 @@ describe( "cemento", ( ) => {
 				}
 
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, false );
 
 		} );
@@ -225,7 +225,7 @@ describe( "cemento", ( ) => {
 
 	describe( `"Property descriptor enumerable"`, ( ) => {
 		it( "should be equal to false", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -236,7 +236,7 @@ describe( "cemento", ( ) => {
 				}
 
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, false );
 
 		} );
