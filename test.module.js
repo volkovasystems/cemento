@@ -183,7 +183,7 @@ describe( "cemento", ( ) => {
 		} );
 
 		it( "should freeze the object", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -193,7 +193,7 @@ describe( "cemento", ( ) => {
 				}
 
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, true );
 
 		} );
