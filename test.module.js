@@ -162,6 +162,8 @@ describe( "cemento", ( ) => {
 
 describe( "cemento", ( ) => {
 
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+	
 	describe( `"cemento( { 'name': 'simple' }"`, ( ) => {
 		it( "should be equal to 'simple'", ( ) => {
 
