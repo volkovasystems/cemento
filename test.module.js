@@ -164,7 +164,7 @@ describe( "cemento", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `"cemento( { 'name': 'simple' }, { } )"`, ( ) => {
+	describe( "`cemento( { 'name': 'simple' }, { } )`", ( ) => {
 
 		it( "should contain name property with value of 'simple'", ( ) => {
 
@@ -201,7 +201,7 @@ describe( "cemento", ( ) => {
 	} );
 
 
-	describe( `"Property descriptor writable"`, ( ) => {
+	describe( "`Property descriptor writable`", ( ) => {
 		it( "should be equal to false", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -221,7 +221,7 @@ describe( "cemento", ( ) => {
 	} );
 
 
-	describe( `"Property descriptor configurable"`, ( ) => {
+	describe( "`Property descriptor configurable`", ( ) => {
 		it( "should be equal to false", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -241,7 +241,7 @@ describe( "cemento", ( ) => {
 	} );
 
 
-	describe( `"Property descriptor enumerable"`, ( ) => {
+	describe( "`Property descriptor enumerable`", ( ) => {
 		it( "should be equal to false", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
