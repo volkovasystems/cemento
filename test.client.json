@@ -1,11 +1,11 @@
 {
 	"state": {
-		"passed": 0,
+		"passed": 5,
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-07-30T11:44:58.374Z",
-	"end": "2017-07-30T11:45:32.208Z",
+	"start": "2017-08-09T00:45:18.777Z",
+	"end": "2017-08-09T00:45:51.710Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -24,5 +24,180 @@
 		"timeout": 10000,
 		"ui": "bdd"
 	},
-	"suites": []
+	"suites": [
+		{
+			"name": "cemento",
+			"duration": 0,
+			"start": "2017-08-09T00:45:51.239Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "cemento",
+			"duration": 289,
+			"start": "2017-08-09T00:45:51.240Z",
+			"end": "2017-08-09T00:45:51.529Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-09T00:45:51.241Z",
+					"end": "2017-08-09T00:45:51.242Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should contain name property with value of 'simple'"
+				},
+				{
+					"start": "2017-08-09T00:45:51.370Z",
+					"end": "2017-08-09T00:45:51.370Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should contain name property with value of 'simple'"
+				},
+				{
+					"start": "2017-08-09T00:45:51.371Z",
+					"end": "2017-08-09T00:45:51.371Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should freeze the object"
+				},
+				{
+					"start": "2017-08-09T00:45:51.415Z",
+					"end": "2017-08-09T00:45:51.415Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should freeze the object"
+				},
+				{
+					"start": "2017-08-09T00:45:51.416Z",
+					"end": "2017-08-09T00:45:51.416Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-09T00:45:51.457Z",
+					"end": "2017-08-09T00:45:51.457Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-09T00:45:51.457Z",
+					"end": "2017-08-09T00:45:51.458Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-09T00:45:51.493Z",
+					"end": "2017-08-09T00:45:51.493Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-09T00:45:51.494Z",
+					"end": "2017-08-09T00:45:51.494Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-09T00:45:51.528Z",
+					"end": "2017-08-09T00:45:51.528Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cemento",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-09T00:45:51.529Z",
+					"end": "2017-08-09T00:45:51.529Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "cemento"
+				}
+			]
+		},
+		{
+			"name": "`cemento( { 'name': 'simple' }, { } )`",
+			"duration": 176,
+			"start": "2017-08-09T00:45:51.240Z",
+			"end": "2017-08-09T00:45:51.416Z",
+			"tests": [
+				{
+					"name": "should contain name property with value of 'simple'",
+					"start": "2017-08-09T00:45:51.241Z",
+					"end": "2017-08-09T00:45:51.370Z",
+					"duration": 129,
+					"state": "pass"
+				},
+				{
+					"name": "should freeze the object",
+					"start": "2017-08-09T00:45:51.371Z",
+					"end": "2017-08-09T00:45:51.415Z",
+					"duration": 44,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor writable`",
+			"duration": 41,
+			"start": "2017-08-09T00:45:51.416Z",
+			"end": "2017-08-09T00:45:51.457Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-08-09T00:45:51.416Z",
+					"end": "2017-08-09T00:45:51.457Z",
+					"duration": 41,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor configurable`",
+			"duration": 37,
+			"start": "2017-08-09T00:45:51.457Z",
+			"end": "2017-08-09T00:45:51.494Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-08-09T00:45:51.457Z",
+					"end": "2017-08-09T00:45:51.493Z",
+					"duration": 36,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor enumerable`",
+			"duration": 35,
+			"start": "2017-08-09T00:45:51.494Z",
+			"end": "2017-08-09T00:45:51.529Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-08-09T00:45:51.494Z",
+					"end": "2017-08-09T00:45:51.528Z",
+					"duration": 34,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
 }
