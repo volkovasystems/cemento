@@ -73,41 +73,69 @@ const path = require( "path" );
 
 describe( "cemento", ( ) => {
 
-	describe( "`cemento with entity and context`", ( ) => {
+	describe( "`cemento( { 'name': 'simple' }, { } )`", ( ) => {
 
-		describe( "cemento( { 'name': 'simple' }, { } )", ( ) => {
+		it( "should contain name property with value of 'simple'", ( ) => {
 
 			let test = { };
 			let entity = cemento( { "name": "simple" }, test );
 
-			it( "should freeze the object", ( ) => {
-				assert.equal( Object.isFrozen( entity ), true );
-			} );
-
-			it( "should have a name property with a value of 'simple'", ( ) => {
-					assert.equal( entity[ "name" ], "simple" );
-			} );
-
-			describe( "Object properties or descriptor", ( ) => {
-
-				let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
-
-				it( "should make the object property or descriptor non-writable", ( ) => {
-					assert.equal( descriptor.writable, false );
-				} );
-
-				it( "should make the object property or descriptor non-configurable", ( ) => {
-					assert.equal( descriptor.configurable, false );
-				} );
-
-				it( "should make the object property or descriptor non-enumerable", ( ) => {
-					assert.equal( descriptor.enumerable, false );
-				} );
-
-			} );
+			assert.equal( entity.name, "simple" );
 
 		} );
 
+		it( "should freeze the object", ( ) => {
+			//: @ignore:
+
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+
+			assert.equal( Object.isFrozen( entity ), true );
+			//: @end-ignore
+
+		} );
+
+	} );
+
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			//: @ignore:
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+			//: @end-ignore
+
+			assert.equal( descriptor.writable, false );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			//: @ignore:
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+			//: @end-ignore
+
+			assert.equal( descriptor.configurable, false );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+			//: @ignore:
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+			//: @end-ignore
+			assert.equal( descriptor.enumerable, false );
+
+		} );
 	} );
 
 } );
@@ -117,42 +145,7 @@ describe( "cemento", ( ) => {
 //: @client:
 describe( "cemento", ( ) => {
 
-	describe( "`cemento with entity and context`", ( ) => {
 
-		describe( "cemento( { 'name': 'simple' }, { } )", ( ) => {
-
-			let test = { };
-			let entity = cemento( { "name": "simple" }, test );
-
-			it( "should freeze the object", ( ) => {
-				assert.equal( Object.isFrozen( entity ), true );
-			} );
-
-			it( "should have a name property with a value of 'simple'", ( ) => {
-					assert.equal( entity[ "name" ], "simple" );
-			} );
-
-			describe( "Object properties or descriptor", ( ) => {
-
-				let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
-
-				it( "should make the object property or descriptor non-writable", ( ) => {
-					assert.equal( descriptor.writable, false );
-				} );
-
-				it( "should make the object property or descriptor non-configurable", ( ) => {
-					assert.equal( descriptor.configurable, false );
-				} );
-
-				it( "should make the object property or descriptor non-enumerable", ( ) => {
-					assert.equal( descriptor.enumerable, false );
-				} );
-
-			} );
-
-		} );
-
-	} );
 
 } );
 
