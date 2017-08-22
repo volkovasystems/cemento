@@ -1,88 +1,88 @@
 {
-  "stats": {
-    "suites": 5,
-    "tests": 5,
-    "passes": 5,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-20T01:45:10.633Z",
-    "end": "2017-08-20T01:45:10.646Z",
-    "duration": 13
-  },
-  "tests": [
-    {
-      "title": "should contain name property with value of 'simple'",
-      "fullTitle": "cemento `cemento( { 'name': 'simple' }, { } )` should contain name property with value of 'simple'",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should freeze the object",
-      "fullTitle": "cemento `cemento( { 'name': 'simple' }, { } )` should freeze the object",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to false",
-      "fullTitle": "cemento `Property descriptor writable` should be equal to false",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to false",
-      "fullTitle": "cemento `Property descriptor configurable` should be equal to false",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to false",
-      "fullTitle": "cemento `Property descriptor enumerable` should be equal to false",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ],
-  "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "should contain name property with value of 'simple'",
-      "fullTitle": "cemento `cemento( { 'name': 'simple' }, { } )` should contain name property with value of 'simple'",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should freeze the object",
-      "fullTitle": "cemento `cemento( { 'name': 'simple' }, { } )` should freeze the object",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to false",
-      "fullTitle": "cemento `Property descriptor writable` should be equal to false",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to false",
-      "fullTitle": "cemento `Property descriptor configurable` should be equal to false",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should be equal to false",
-      "fullTitle": "cemento `Property descriptor enumerable` should be equal to false",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ]
+	"stats": {
+		"suites": 5,
+		"tests": 5,
+		"passes": 5,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-22T03:48:14.248Z",
+		"end": "2017-08-22T03:48:14.254Z",
+		"duration": 6
+	},
+	"tests": [
+		{
+			"title": "should contain name property with value of 'simple'",
+			"fullTitle": "cemento `cemento( { 'name': 'simple' }, { } )` should contain name property with value of 'simple'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should freeze the object",
+			"fullTitle": "cemento `cemento( { 'name': 'simple' }, { } )` should freeze the object",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "cemento `Property descriptor writable` should be equal to false",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "cemento `Property descriptor configurable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "cemento `Property descriptor enumerable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should contain name property with value of 'simple'",
+			"fullTitle": "cemento `cemento( { 'name': 'simple' }, { } )` should contain name property with value of 'simple'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should freeze the object",
+			"fullTitle": "cemento `cemento( { 'name': 'simple' }, { } )` should freeze the object",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "cemento `Property descriptor writable` should be equal to false",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "cemento `Property descriptor configurable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "cemento `Property descriptor enumerable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }
