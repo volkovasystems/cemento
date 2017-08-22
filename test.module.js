@@ -85,13 +85,11 @@ describe( "cemento", ( ) => {
 		} );
 
 		it( "should freeze the object", ( ) => {
-			//: @ignore:
 
 			let test = { };
 			let entity = cemento( { "name": "simple" }, test );
 
 			assert.equal( Object.isFrozen( entity ), true );
-			//: @end-ignore
 
 		} );
 
@@ -100,11 +98,10 @@ describe( "cemento", ( ) => {
 
 	describe( "`Property descriptor writable`", ( ) => {
 		it( "should be equal to false", ( ) => {
-			//: @ignore:
+
 			let test = { };
 			let entity = cemento( { "name": "simple" }, test );
 			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
-			//: @end-ignore
 
 			assert.equal( descriptor.writable, false );
 
@@ -114,11 +111,10 @@ describe( "cemento", ( ) => {
 
 	describe( "`Property descriptor configurable`", ( ) => {
 		it( "should be equal to false", ( ) => {
-			//: @ignore:
+
 			let test = { };
 			let entity = cemento( { "name": "simple" }, test );
 			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
-			//: @end-ignore
 
 			assert.equal( descriptor.configurable, false );
 
@@ -128,11 +124,11 @@ describe( "cemento", ( ) => {
 
 	describe( "`Property descriptor enumerable`", ( ) => {
 		it( "should be equal to false", ( ) => {
-			//: @ignore:
+
 			let test = { };
 			let entity = cemento( { "name": "simple" }, test );
 			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
-			//: @end-ignore
+
 			assert.equal( descriptor.enumerable, false );
 
 		} );
@@ -143,9 +139,69 @@ describe( "cemento", ( ) => {
 //: @end-server
 
 //: @client:
+
 describe( "cemento", ( ) => {
 
+	describe( "`cemento( { 'name': 'simple' }, { } )`", ( ) => {
 
+		it( "should contain name property with value of 'simple'", ( ) => {
+
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+
+			assert.equal( entity.name, "simple" );
+
+		} );
+
+		it( "should freeze the object", ( ) => {
+
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+
+			assert.equal( Object.isFrozen( entity ), true );
+
+		} );
+
+	} );
+
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+
+			assert.equal( descriptor.writable, false );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+
+			assert.equal( descriptor.configurable, false );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			let entity = cemento( { "name": "simple" }, test );
+			let descriptor = Object.getOwnPropertyDescriptor( entity, "name" );
+
+			assert.equal( descriptor.enumerable, false );
+
+		} );
+	} );
 
 } );
 
